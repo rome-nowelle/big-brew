@@ -1,0 +1,54 @@
+.buttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.buttons button {
+  border-color: transparent;
+}
+
+.buttons button:hover {
+  background: #b86a19;
+  border-color: transparent;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  text-decoration: none;
+  color: #b86a19;
+  padding: 0.7rem 2.5rem;
+  border: 1px solid #b86b1971;
+  border-radius: 0.5rem;
+}
+
+.cancel-btn:hover {
+  color: #b86a19;
+  text-decoration: none;
+  border-color: #b86a19;
+}
+
+.profile .row .col-md-6 form .form-group {
+  display: flex;
+  align-items: center;
+  /* justify-content: ; */
+  /* gap: 1rem; */
+}
+
+.profile .row .col-md-6 form .form-group label {
+  align-self: flex-end;
+  width: 12rem;
+}
+
+.profile .row .col-md-6 form .form-group input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  width: 100%;
+}
+
+.tab-pane .row {
+  width: 700px;
+}
