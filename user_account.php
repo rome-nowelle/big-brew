@@ -21,10 +21,11 @@ $con = connection();
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-  <title><?php echo $_SESSION['user_name']; ?> -
-    Account Big Brew</title>
+  <title>Welcome, <?php echo $_SESSION['user_name']; ?></title>
   <link rel="stylesheet" href="./css/user_account.css">
   <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="icon" type="image/x-icon" href="/../big-brew/img/logo1(1).png">
 </head>
 
 <body>

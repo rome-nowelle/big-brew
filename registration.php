@@ -158,23 +158,23 @@ if(isset($_POST['signin'])) {
       <div class="input-group">
         <!-- name -->
         <div class="input-field" id="nameField">
-          <input type="text" name="user_name" id="sign-up-name" placeholder="Name" required>
+          <input type="text" name="user_name" id="sign-up-name" placeholder="Name:" required>
         </div>
         <!-- email -->
         <div class="input-field" id="nameField">
-          <input type="email" name="user_email" id="sign-up-email" placeholder="Email" required>
+          <input type="email" name="user_email" id="sign-up-email" placeholder="Email:" required>
         </div>
         <!-- address -->
         <div class="input-field" id="nameField">
-          <input type="text" name="user_address" id="sign-up-name" placeholder="address" required>
+          <input type="text" name="user_address" id="sign-up-name" placeholder="Address:" required>
         </div>
         <!-- contact -->
         <div class="input-field" id="nameField">
-          <input type="text" name="user_contact_number" id="sign-up-name" placeholder="contact_number" required>
+          <input type="text" name="user_contact_number" id="sign-up-name" placeholder="Contact Number:" required>
         </div>
         <!-- password -->
         <div class="input-field" id="nameField">
-          <input type="password" name="user_password" id="password" placeholder="Password" required>
+          <input type="password" name="user_password" id="password" placeholder="Password:" required>
         </div>
         <div class="button-container">
           <!-- submit button -->
@@ -188,6 +188,8 @@ if(isset($_POST['signin'])) {
       </div>
     </form>
   </div>
+
+  
   <!-- SIGNIN -->
   <div class="form-box" id="sign-in" style="display: none;">
     <h1 id="title">Sign In</h1>
