@@ -10,7 +10,7 @@
   <title>BigBrew - Add to cart</title>
 
   <!-- Link to CSS -->
-  <link rel="stylesheet" href="addtocarts.css">
+  <link rel="stylesheet" href="./css/addtocarts.css">
 
   <!-- Box Icons -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">

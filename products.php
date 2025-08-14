@@ -311,7 +311,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="img/Lemon Fruit Tea.png" alt="">
+                <img src="./img/Fruit Tea/Lemon Fruit Tea.png" alt="">
                 <h3>Lemon</h3>
                 <div class="type">
                     <p>Medio</p>
@@ -847,6 +847,6 @@
     </section>
 
     <!-- Link to JavaSript -->
-    <script src="main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
