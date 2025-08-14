@@ -60,7 +60,7 @@
         <!-- Container -->
         <div class="product-container1">
             <div class="box">
-                <img src="img/Okinawa.png" alt="">
+                <img src="./img/Milktea/Okinawa.png" alt="">
                 <h3>Okinawa</h3>
                 <div class="type">
                     <p>Medio</p>
@@ -92,7 +92,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="img/Red Velvet.png" alt="">
+                <img src="./img/Milktea/Red Velvet.png" alt="">
                 <h3>Red Velvet</h3>
                 <div class="type">
                     <p>Medio</p>
@@ -108,7 +108,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="img/Matcha.png" alt="">
+                <img src="./img/Milktea/Matcha.png" alt="">
                 <h3>Matcha</h3>
                 <div class="type">
                     <p>Medio</p>
@@ -124,7 +124,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="img/Taro.png" alt="">
+                <img src="./img/Milktea/Taro.png" alt="">
                 <h3>Double Dutch</h3>
                 <div class="type">
                     <p>Medio</p>
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="img/Dark Choco.png" alt="">
+                <img src="./img/Milktea/Dark Choco.png" alt="">
                 <h3>Dark Choco</h3>
                 <div class="type">
                     <p>Medio</p>
@@ -263,7 +263,7 @@
         <!-- Container -->
         <div class="product-container2">
             <div class="box">
-                <img src="img/Kiwi.png" alt="">
+                <img src="./img/Fruit Tea/Kiwi.png" alt="">
                 <h3>Kiwi</h3>
                 <div class="type">
                     <p>Medio</p>
@@ -295,7 +295,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="img/Green Apple Fruit Tea.png" alt="">
+                <img src="./img/Fruit Tea/Green Apple Fruit Tea.png" alt="">
                 <h3>Green Apple</h3>
                 <div class="type">
                     <p>Medio</p>
@@ -407,7 +407,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="img/Watermelon.png" alt="">
+                <img src="./img/Fruit Tea/Watermelon.png" alt="">
                 <h3>Water Melon</h3>
                 <div class="type">
                     <p>Medio</p>
@@ -434,7 +434,7 @@
     <!-- Container -->
     <div class="product-container3">
         <div class="box">
-            <img src="img/Kape Brusko.png" alt="">
+            <img src="./img/Iced Coffee/Kape Brusko.png" alt="">
             <h3>Kape Brusko</h3>
             <div class="contentc">
                 <p>Medio</p>
@@ -470,7 +470,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Kape Mocha.png" alt="">
+            <img src="./img/Iced Coffee/Kape Mocha.png" alt="">
             <h3>Kape Moca</h3>
             <div class="contentc">
                 <p>Medio</p>
@@ -488,7 +488,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Kape Vanilla.png" alt="">
+            <img src="./img/Iced Coffee/Kape Vanilla.png" alt="">
             <h3> Kape Vanilla</h3>
             <div class="contentc">
                 <p>Medio</p>
@@ -506,7 +506,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Kape Fudge.png" alt="">
+            <img src="./img/Iced Coffee/Kape Fudge.png" alt="">
             <h3>Kape Fudge</h3>
             <div class="contentc">
                 <p>Medio</p>
@@ -542,7 +542,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Kape Karamel.png" alt="">
+            <img src="./img/Iced Coffee/Kape Karamel.png" alt="">
             <h3>Kape Karamel</h3>
             <div class="contentc">
                 <p>Medio</p>
@@ -589,7 +589,7 @@
     <!-- Container -->
     <div class="product-container4">
         <div class="box">
-            <img src="img/Mocha Praf.png" alt="">
+            <img src="./img/Praf/Mocha Praf.png" alt="">
             <h3>Coffee-Based</h3>
             <h4>Moca</h4>
             <div class="content">
@@ -598,7 +598,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Coffee Jelly Praf.png" alt="">
+            <img src="./img/Praf/Coffee Jelly Praf.png" alt="">
             <h3>Coffee-Based</h3>
             <h4>Coffee Jelly</h4>
             <div class="content">
@@ -616,7 +616,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Vanilla Coffee.png" alt="">
+            <img src="./img/Praf/Vanilla Coffee.png" alt="">
             <h3>Coffee-Based</h3>
             <h4>Vanilla Coffee</h4>
             <div class="content">
@@ -643,7 +643,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Taro Cream.png" alt="">
+            <img src="./img/Praf/Taro Cream.png" alt="">
             <h3>Cream-Based</h3>
             <h4>Taro Cream</h4>
             <div class="content">
@@ -670,7 +670,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Strawberry Praf.png" alt="">
+            <img src="./img/Praf/Strawberry Praf.png" alt="">
             <h3>Cream-Based</h3>
             <h4>Strawberry Cream</h4>
             <div class="content">
@@ -690,7 +690,7 @@
     <!-- Container -->
     <div class="product-container5">
         <div class="box">
-            <img src="img/Hot Brusko.png" alt="">
+            <img src="./img/Hotbrew/Hot Brusko.png" alt="">
             <h3>Hot Brusko</h3>
             <div class="content">
                 <span>₱ 35</span>
@@ -698,7 +698,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Hot Choco.png" alt="">
+            <img src="./img/Hotbrew/Hot Choco.png" alt="">
             <h3>Hot Choco</h3>
             <div class="content">
                 <span>₱ 35</span>
@@ -706,7 +706,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Hot Moca.png" alt="">
+            <img src="./img/Hotbrew/Hot Moca.png" alt="">
             <h3>Hot Moca</h3>
             <div class="content">
                 <span>₱ 35</span>
@@ -714,7 +714,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Hot Matcha.png" alt="">
+            <img src="./img/Hotbrew/Hot Matcha.png" alt="">
             <h3>Hot Macha</h3>
             <div class="content">
                 <span>₱ 35</span>
@@ -722,7 +722,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="img/Hot Karamel.png" alt="">
+            <img src="./img/Hotbrew/Hot Karamel.png" alt="">
             <h3>Hot Karamel</h3>
             <div class="content">
                 <span>₱ 35</span>
@@ -799,52 +799,10 @@
     </div>
 </section>
 
- <!-- Back to the top -->
- <section id="back">
-     <a href="#">Back to the top<i class='bx bxs-chevron-up' ></i></a>
-</section>
-
 <!-- Footer -->
-<section class="footer">
-            <div class="footer-box">
-                <div class="social">
-                <img src="img/logo1.png" alt="">
-                <h2>Bigbrew</h2>
-                </div>
-                <p>Affordable bliss in every sip,<br> milktea magic on a budget trip!</br></p>
-                <div class="social">
-                    <a href="https://www.facebook.com/bigbrew.main"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://www.tiktok.com/@bigbrewmain"><i class='bx bxl-tiktok'></i></a>
-                    <a href="https://www.instagram.com/bigbrew.main/"><i class='bx bxl-instagram'></i></a>
-                </div>
-            </div>
-            <div class="footer-box">
-                <h3>Order and Pickup</h3>
-                <li><a href="#">Order on the Web</a></li>
-                <li><a href="#">Delivery</a></li>
-                <li><a href="#">Order and Pickup Options</a></li>
-            </div>
-            <div class="footer-box">
-                <h3>About</h3>
-                <li><a href="#">Our Company</a></li>
-                <li><a href="#">Our Coffee</a></li>
-                <li><a href="#">Customer Service</a></li>
-            </div>
-            <div class="footer-box1">
-                <h3>Contact</h3>
-                <li><a href="#">Maypajo, Caloocan, Metro Manila</a></li>
-                <li><a href="#">09353007585</a></li>
-                <li><a href="#">bigbrewmain@gmail.com</a></li>
-                <h4>-Business Hours-</h4> 
-                <p>MONDAY TO SATURDAY<br>1:00 PM - 10:00 PM</br></p>
-            </div>
-        </section>
-
-    <!-- Copyright -->
-        <div class="copyright">
-            <p>&#169; BSIT 2-2N Group No.7 All Right Reserved</p>
-        </div>
-    </section>
+<div>
+    <?php include('footer.php'); ?>
+</div>
 
     <!-- Link to JavaSript -->
     <script src="./js/main.js"></script>
