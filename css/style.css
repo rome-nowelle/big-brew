@@ -50,7 +50,6 @@ header {
   padding: 15px 80px;
   transition: 0.5s linear;
   background: var(--text-color);
-  top: 0;
   left: 0;
 }
 

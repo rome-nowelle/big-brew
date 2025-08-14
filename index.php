@@ -40,7 +40,7 @@
     </div>
     <!-- Search box -->
     <div class="search-box">
-      <input type="search" name="" id="" placeholder="Search Here...">
+      <input type="search" name="search" id="search" placeholder="Search Here...">
     </div>
   </header>
 

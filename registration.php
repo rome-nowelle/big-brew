@@ -64,7 +64,8 @@ if(isset($_POST['signin'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BigBrew - Register Now!</title>
+  <link rel="icon" type="image/x-icon" href="/../big-brew/img/logo1(1).png">
+  <title>BigBrew - Login/Signup</title>
 
   <!-- Link to CSS -->
   <link rel="stylesheet" href="./css/registration.css">
@@ -75,27 +76,24 @@ if(isset($_POST['signin'])) {
 
 <body>
   <header>
-    <a href="index.html" class="logo">
-      <img src="img/logo1.png" alt="">
+    <a class="logo">
+      <img src="img/logo2.jpg" alt="">
     </a>
-
-    <!-- Menu Icon -->
+    <!--Menu Icon-->
     <i class='bx bx-menu' id="menu-icon"></i>
-
     <!-- Links -->
     <ul class="navbar">
       <li><a href="index.php">Home</a></li>
+      <li><a href="products.php">Menu</a></li>
       <li><a href="aboutus.php">About Us</a></li>
-      <li><a href="products.php">products</a></li>
       <li><a href="location.php">Location</a></li>
     </ul>
-
-    <!-- Icon -->
+    <!-- Icons -->
     <div class="header-icon">
-      <a href="addtocart.php" class='bx bx-cart-alt'></a>
-      <i class='bx bx-search' id="search-icon"></i>
+      <i class='bx bx-search-alt-2' id="search-icon"></i>
+      <a href="registration.php" class='bx bx-cart-alt'></a>
     </div>
-    <!-- Search Box -->
+    <!-- Search box -->
     <div class="search-box">
       <input type="search" name="" id="" placeholder="Search Here...">
     </div>
@@ -213,6 +211,12 @@ if(isset($_POST['signin'])) {
     </form>
   </div>
   </div>
+
+      <!-- Footer -->
+    <div>
+        <?php include('footer.php'); ?>
+    </div>
+   
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
