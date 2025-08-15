@@ -90,8 +90,9 @@ if(isset($_POST['signin'])) {
     </ul>
     <!-- Icons -->
     <div class="header-icon">
-      <i class='bx bx-search-alt-2' id="search-icon"></i>
-      <a href="registration.php" class='bx bx-cart-alt'></a>
+      <a href="registration.php" class='bx bx-user' style="visibility: hidden; cursor: none"></a> 
+      <i class='bx bx-search-alt-2' id="search-icon" style="visibility: hidden; cursor: none"></i>
+      <a href="registration.php" class='bx bx-cart-alt' style="cursor: pointer"></a>
     </div>
     <!-- Search box -->
     <div class="search-box">
@@ -100,6 +101,32 @@ if(isset($_POST['signin'])) {
   </header>
 
   <div class="container">
+
+    <!-- SIGNIN -->
+  <div class="form-box" id="sign-in" style="display: none;">
+    <h1 id="title">Sign In</h1>
+    <form method="post">
+      <div class="input-group">
+        <!-- email -->
+        <div class="input-field" id="nameField">
+          <input type="email" name="user_email" id="sign-in-email" placeholder="Email" required>
+        </div>
+        <!-- password -->
+        <div class="input-field" id="nameField">
+          <input type="password" name="user_password" id="sign-in-password" placeholder="Password" required>
+        </div>
+        <div class="button-container">
+          <!-- submit button -->
+          <button type="submit" class="submit-btn" name="signin">Continue</button>
+          <!-- forgot password -->
+          <p id="premove">Forgot Password <a href="#">Click Here!</a></p>
+        </div>
+        <!-- sign in page -->
+        <a href="sign-up" id="signinBtn" class="signin-btn">Sign up</a>
+      </div>
+    </form>
+  </div>
+
     <!-- SIGNUP -->
     <!-- terms and conditions -->
     <div id="termsModal" class="modal">
@@ -150,66 +177,41 @@ if(isset($_POST['signin'])) {
 
   </div>
   <!-- end of terms and conditions -->
-  <div class="form-box" id="sign-up">
+  <div class="form-signup" id="sign-up">
     <h1 id="title">Sign Up</h1>
     <form method="post" onsubmit="return showTermsModal(event)">
       <div class="input-group">
         <!-- name -->
         <div class="input-field" id="nameField">
-          <input type="text" name="user_name" id="sign-up-name" placeholder="Name" required>
+          <input type="text" name="user_name" id="sign-up-name" placeholder="Name:" required>
         </div>
         <!-- email -->
         <div class="input-field" id="nameField">
-          <input type="email" name="user_email" id="sign-up-email" placeholder="Email" required>
+          <input type="email" name="user_email" id="sign-up-email" placeholder="Email:" required>
         </div>
         <!-- address -->
         <div class="input-field" id="nameField">
-          <input type="text" name="user_address" id="sign-up-name" placeholder="address" required>
+          <input type="text" name="user_address" id="sign-up-name" placeholder="Address:" required>
         </div>
         <!-- contact -->
         <div class="input-field" id="nameField">
-          <input type="text" name="user_contact_number" id="sign-up-name" placeholder="contact_number" required>
+          <input type="text" name="user_contact_number" id="sign-up-name" placeholder="Contact Number:" required>
         </div>
         <!-- password -->
         <div class="input-field" id="nameField">
-          <input type="password" name="user_password" id="password" placeholder="Password" required>
+          <input type="password" name="user_password" id="password" placeholder="Password:" required>
         </div>
         <div class="button-container">
           <!-- submit button -->
           <!-- <button type="submit" class="submit-btn" name="signup">Continue</button> -->
           <button type="submit" class="submit-btn" name="signup" id="signupBtn">Continue</button>
-          <!-- forgot password -->
-          <p id="premove">Forgot Password <a href="#">Click Here!</a></p>
         </div>
         <!-- sign in page -->
         <a href="sign-in" id="signinBtn" class="signup-btn">Sign in</a>
       </div>
     </form>
   </div>
-  <!-- SIGNIN -->
-  <div class="form-box" id="sign-in" style="display: none;">
-    <h1 id="title">Sign In</h1>
-    <form method="post">
-      <div class="input-group">
-        <!-- email -->
-        <div class="input-field" id="nameField">
-          <input type="email" name="user_email" id="sign-in-email" placeholder="Email" required>
-        </div>
-        <!-- password -->
-        <div class="input-field" id="nameField">
-          <input type="password" name="user_password" id="sign-in-password" placeholder="Password" required>
-        </div>
-        <div class="button-container">
-          <!-- submit button -->
-          <button type="submit" class="submit-btn" name="signin">Continue</button>
-          <!-- forgot password -->
-          <p id="premove">Forgot Password <a href="#">Click Here!</a></p>
-        </div>
-        <!-- sign in page -->
-        <a href="sign-up" id="signinBtn" class="signin-btn">Sign up</a>
-      </div>
-    </form>
-  </div>
+  
   </div>
 
       <!-- Footer -->
@@ -217,13 +219,17 @@ if(isset($_POST['signin'])) {
         <?php include('footer.php'); ?>
     </div>
    
-
+  <script src="./js/main.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const signUpForm = document.getElementById("sign-up");
       const signInForm = document.getElementById("sign-in");
-      const signUpLink = document.querySelector("#sign-up a.signup-btn");
       const signInLink = document.querySelector("#sign-in a.signin-btn");
+      const signUpLink = document.querySelector("#sign-up a.signup-btn");
+
+      // Show sign-in form by default, hide sign-up
+      signUpForm.style.display = "none";
+      signInForm.style.display = "block";
 
       signUpLink.addEventListener("click", function(e) {
         e.preventDefault();
@@ -239,11 +245,12 @@ if(isset($_POST['signin'])) {
     });
 
     // error message 
-    const errorMessage = document.getElementById('errorMessage')
-    setTimeout(() => {
-      errorMessage.remove();
-    }, 6000);
-
+    const errorMessage = document.getElementById('errorMessage');
+    if (errorMessage) {
+      setTimeout(() => {
+        errorMessage.remove();
+      }, 6000);
+    }
 
     function showTermsModal(event) {
       const termsModal = document.getElementById("termsModal");
@@ -258,22 +265,14 @@ if(isset($_POST['signin'])) {
 
     document.addEventListener("DOMContentLoaded", function() {
       const termsModal = document.getElementById("termsModal");
-      const signupForm = document.getElementById("signupForm");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+      const agreeCheckbox = document.getElementById("agreeCheckbox");
 
-      closeModalBtn.addEventListener("click", function() {
-        termsModal.style.display = "none";
-      });
-
-      signupForm.addEventListener("submit", function(event) {
-        termsModal.style.display = "block";
-
-        if (!agreeCheckbox.checked) {
-          event.preventDefault(); // Prevent form submission
-          const agreeCheckbox = document.getElementById("agreeCheckbox");
-          termsModal.style.display = "block";
-          return false;
-        }
-      });
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", function() {
+          termsModal.style.display = "none";
+        });
+      }
     });
   </script>
 </body>

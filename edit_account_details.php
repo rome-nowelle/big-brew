@@ -40,7 +40,7 @@ if(isset($_POST['update_account'])) {
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title><?php echo $_SESSION['user_name']; ?> -
     Edit Account Big Brew</title>
-  <link rel="stylesheet" href="user_account.css">
+  <link rel="stylesheet" href="./css/user_account.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/edit_account_details.css">
 </head>

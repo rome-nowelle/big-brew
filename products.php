@@ -34,9 +34,9 @@
         </ul>
         <!-- Icons -->
         <div class="header-icon">
-            <a href="registration.php" class='bx bx-user'></a> 
             <i class='bx bx-search-alt-2' id="search-icon"></i>
             <a href="addtocart.php" class='bx bx-cart-alt'></a>
+            <a href="registration.php" class='bx bx-user'></a> 
         </div>
         <!-- Search box -->
         <div class="search-box">

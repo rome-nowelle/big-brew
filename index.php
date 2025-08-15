@@ -33,10 +33,10 @@
       <li><a href="location.php">Location</a></li>
     </ul>
     <!-- Icons -->
-    <div class="header-icon">
+    <div class="header-icon"> 
+      <i class='bx bx-search-alt-2' id="search-icon" style="visibility: hidden; cursor: none"></i>
+      <a href="registration.php" class='bx bx-cart-alt' style="cursor: pointer"></a>
       <a href="registration.php" class='bx bx-user'></a>
-      <i class='bx bx-search-alt-2' id="search-icon"></i>
-      <a href="registration.php" class='bx bx-cart-alt'></a>
     </div>
     <!-- Search box -->
     <div class="search-box">
