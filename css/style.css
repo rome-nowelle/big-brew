@@ -371,6 +371,7 @@ header {
   text-align: center;
   padding: 1%;
   margin-top: 25px;
+  background-color: var(--bg-color);
 }
 
 #back a {
@@ -397,6 +398,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   gap: 6rem;
+  background-color: var(--bg-color);
 }
 
 .footer-box h2 {

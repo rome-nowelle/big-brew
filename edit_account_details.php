@@ -38,8 +38,11 @@ if(isset($_POST['update_account'])) {
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <title><?php echo $_SESSION['user_name']; ?> -
-    Edit Account Big Brew</title>
+  <title> Bigbrew - Edit your account</title>
+
+    <link rel="icon" type="image/x-icon" href="/../big-brew/img/logo1(1).png">
+    <!-- Box Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="./css/user_account.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/edit_account_details.css">
@@ -116,6 +119,10 @@ if(isset($_POST['update_account'])) {
         </div>
       </div>
     </div>
+  </div>
+
+  <div>
+        <?php include('footer.php'); ?>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

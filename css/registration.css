@@ -213,7 +213,7 @@ header {
   width: 100%;
   max-width: 480px;
   position: absolute;
-  top: 60%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--bg-color);
@@ -335,6 +335,14 @@ form p a {
   color: var(--bigbrew-color);
 }
 
+.signup-button {
+  text-align: center;
+}
+
+.forgot-pass {
+  font-size: 12px;
+  margin-left: 5px;
+}
 .hide {
   display: none;
 }
@@ -399,6 +407,14 @@ form p a {
 
 .modal .modal-content #closeModalBtn:hover {
   font-weight: bold;
+}
+
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 

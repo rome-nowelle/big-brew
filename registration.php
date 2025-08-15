@@ -116,13 +116,13 @@ if(isset($_POST['signin'])) {
           <input type="password" name="user_password" id="sign-in-password" placeholder="Password" required>
         </div>
         <div class="button-container">
+            <!-- forgot password -->
+          <p id="premove" class="forgot-pass">Forgot Password <a href="#">Click Here!</a></p>
           <!-- submit button -->
           <button type="submit" class="submit-btn" name="signin">Continue</button>
-          <!-- forgot password -->
-          <p id="premove">Forgot Password <a href="#">Click Here!</a></p>
         </div>
         <!-- sign in page -->
-        <a href="sign-up" id="signinBtn" class="signin-btn">Sign up</a>
+        <p class="signup-button">Don't Have an Account?<a href="sign-up" id="signinBtn" class="signin-btn">  Sign up</a></p>
       </div>
     </form>
   </div>

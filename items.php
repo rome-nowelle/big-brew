@@ -127,8 +127,6 @@ $add_ons_row = $add_ons->fetch_assoc();
     </div>
   </header>
 
-  <!--Product Page - NEEDED HANGGANG SA ADD-ONS-->
-  <!-- Page Header - NEEDED -->
   <section id="page-header">
     <h2>Products</h2>
   </section>
