@@ -353,8 +353,8 @@ form p a {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--text-color);
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 10px 25px;
+  border-radius: 8px;
   border: 2px solid var(--bg-color);
   box-shadow: 0 10px 20px #1b1b1b69;
   z-index: 9999;

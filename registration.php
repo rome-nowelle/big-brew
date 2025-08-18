@@ -51,7 +51,8 @@ if(isset($_POST['signin'])) {
         header("Location: user_account.php");
         exit();
     } else {
-        echo '<div class="error-message" id="errorMessage">Invalid username or password! <br> Please sign in again</div>';
+        echo '<head> <link rel="icon" type="image/x-icon" href="/../big-brew/img/logo1(1).png"> </head>
+        <div class="error-message" id="errorMessage">Invalid username or password! <br> Please sign in again</div>';
     }
 }
 ?>

@@ -48,7 +48,8 @@ $add_ons_row = $add_ons->fetch_assoc();
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BigBrew - Products</title>
+  <link rel="icon" type="image/x-icon" href="/../big-brew/img/logo1(1).png">
+  <title>BigBrew - Menu</title>
 
   <!-- Link to CSS -->
   <link rel="stylesheet" href="./css/products.css" />
@@ -128,14 +129,15 @@ $add_ons_row = $add_ons->fetch_assoc();
   </header>
 
   <section id="page-header">
-    <h2>Products</h2>
+    <h2>- Menu -</h2>
+    <p>All Products</p>
   </section>
 
   <!-- BigBrew Milktea -->
   <section class="products1" id="products">
     <div class="heading1">
       <h2>Milktea</h2>
-      <p>With Pearl</p>
+      <p>- With Pearl -</p>
     </div>
     <!-- Container -->
     <div class="product-container1">

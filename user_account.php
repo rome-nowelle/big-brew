@@ -29,6 +29,7 @@ $con = connection();
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg panel">
     <div href="#" class="navbar-brand logo">
       <img src="img/logo2.jpg" alt="">
