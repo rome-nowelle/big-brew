@@ -52,7 +52,7 @@ $con = connection();
           <a class="nav-link" href="items.php">Products</a>
         </li>
         <li class="nav-item d-flex align-items-center justify-content-center">
-          <a href="logout.php" class="icon-link" style="font-size:1.2rem;">
+          <a href="logout.php" class="icon-link" style="font-size:1.2rem;" >
             <i class="bx bx-log-in"></i>
           </a>
         </li>

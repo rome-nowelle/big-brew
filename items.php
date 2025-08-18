@@ -52,7 +52,7 @@ $add_ons_row = $add_ons->fetch_assoc();
   <title>BigBrew - Menu</title>
 
   <!-- Link to CSS -->
-  <link rel="stylesheet" href="./css/products.css" />
+  <link rel="stylesheet" href="../big-brew/css/products.css" />
 
   <!-- Box Icons -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
@@ -99,7 +99,7 @@ $add_ons_row = $add_ons->fetch_assoc();
 <body>
   <!-- Navbar -->
   <header>
-    <a href="index.html" class="logo">
+    <a href="index.php" class="logo">
       <img src="img/logo1.png" alt="" />
     </a>
 
@@ -108,9 +108,14 @@ $add_ons_row = $add_ons->fetch_assoc();
 
     <!-- Links -->
     <ul class="navbar">
-      <li><a
-          href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Go
-          back</a>
+      <li>
+        <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Profile</a>
+      </li>
+      <li>
+        <a href="user_account.php">Orders</a>
+      </li>
+      <li>
+        <a class="active" href="items.php">Menu</a>
       </li>
     </ul>
 
