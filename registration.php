@@ -1,7 +1,7 @@
 <?php
 
-if(!isset($_SESSION)) {
-    session_start();
+if (!isset($_SESSION)) {
+  session_start();
 }
 
 include_once("connection/connection.php");
@@ -9,51 +9,51 @@ connection();
 $con = connection();
 
 // signup page
-if(isset($_POST['signup'])) {
-    $user_name = $_POST['user_name'];
-    $user_email = $_POST['user_email'];
-    $user_address = $_POST['user_address'];
-    $user_contact_number = $_POST['user_contact_number'];
-    $user_password = $_POST['user_password'];
+if (isset($_POST['signup'])) {
+  $user_name = $_POST['user_name'];
+  $user_email = $_POST['user_email'];
+  $user_address = $_POST['user_address'];
+  $user_contact_number = $_POST['user_contact_number'];
+  $user_password = $_POST['user_password'];
 
-    // insert to customer table
-    $insert_customer_details = "INSERT INTO `customers`(`user_name`, `user_email`, `user_address`, `user_contact_number`,`user_password`) VALUES ('$user_name', '$user_email', '$user_address', '$user_contact_number','$user_password')";
-    $con->query($insert_customer_details) or die($con->error);
+  // insert to customer table
+  $insert_customer_details = "INSERT INTO `customers`(`user_name`, `user_email`, `user_address`, `user_contact_number`,`user_password`) VALUES ('$user_name', '$user_email', '$user_address', '$user_contact_number','$user_password')";
+  $con->query($insert_customer_details) or die($con->error);
 
-    // redirect to registration to sign in
-    header("Location: registration.php");
+  // redirect to registration to sign in
+  header("Location: registration.php");
 }
 
 // signin page
 
-if(isset($_POST['signin'])) {
-    $user_email = $_POST['user_email'];
-    $user_password = $_POST['user_password'];
+if (isset($_POST['signin'])) {
+  $user_email = $_POST['user_email'];
+  $user_password = $_POST['user_password'];
 
-    // select the user whom just signed up
-    $get_registered_user = "SELECT * FROM customers WHERE user_email = '$user_email' AND user_password = '$user_password'";
-    $registered_user = $con->query($get_registered_user) or die($con->error);
-    $row = $registered_user->fetch_assoc();
-    $total_query = $registered_user->num_rows;
+  // select the user whom just signed up
+  $get_registered_user = "SELECT * FROM customers WHERE user_email = '$user_email' AND user_password = '$user_password'";
+  $registered_user = $con->query($get_registered_user) or die($con->error);
+  $row = $registered_user->fetch_assoc();
+  $total_query = $registered_user->num_rows;
 
-    if($total_query > 0) {
-        $_SESSION['user_id'] = $row['user_id'] ;
-        $_SESSION['user_name'] = $row['user_name'] ;
-        $_SESSION['user_address'] = $row['user_address'] ;
-        $_SESSION['user_contact_number'] = $row['user_contact_number'] ;
-        $_SESSION['user_email'] = $row['user_email'] ;
-        $_SESSION['user_password'] = $row['user_password'] ;
+  if ($total_query > 0) {
+    $_SESSION['user_id'] = $row['user_id'];
+    $_SESSION['user_name'] = $row['user_name'];
+    $_SESSION['user_address'] = $row['user_address'];
+    $_SESSION['user_contact_number'] = $row['user_contact_number'];
+    $_SESSION['user_email'] = $row['user_email'];
+    $_SESSION['user_password'] = $row['user_password'];
 
-        // update login session
-        $update_signin = "UPDATE customers SET user_name = '{$_SESSION['user_name']}', user_address = '{$_SESSION['user_address']}', user_contact_number = '{$_SESSION['user_contact_number']}', user_email = '{$_SESSION['user_email']}', user_password = '{$_SESSION['user_password']}' WHERE user_id = '{$_SESSION['user_id']}'";
-        $con->query($update_signin) or die($con->error);
+    // update login session
+    $update_signin = "UPDATE customers SET user_name = '{$_SESSION['user_name']}', user_address = '{$_SESSION['user_address']}', user_contact_number = '{$_SESSION['user_contact_number']}', user_email = '{$_SESSION['user_email']}', user_password = '{$_SESSION['user_password']}' WHERE user_id = '{$_SESSION['user_id']}'";
+    $con->query($update_signin) or die($con->error);
 
-        header("Location: user_account.php");
-        exit();
-    } else {
-        echo '<head> <link rel="icon" type="image/x-icon" href="/../big-brew/img/logo1(1).png"> </head>
+    header("Location: user_account.php");
+    exit();
+  } else {
+    echo '<head> <link rel="icon" type="image/x-icon" href="/../big-brew/img/logo1(1).png"> </head>
         <div class="error-message" id="errorMessage">Invalid username or password! <br> Please sign in again</div>';
-    }
+  }
 }
 ?>
 <!-- Registration Page -->
@@ -73,6 +73,9 @@ if(isset($_POST['signin'])) {
 
   <!-- Box Icons -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -91,7 +94,7 @@ if(isset($_POST['signin'])) {
     </ul>
     <!-- Icons -->
     <div class="header-icon">
-      <a href="registration.php" class='bx bx-user' style="visibility: hidden; cursor: none"></a> 
+      <a href="registration.php" class='bx bx-user' style="visibility: hidden; cursor: none"></a>
       <i class='bx bx-search-alt-2' id="search-icon" style="visibility: hidden; cursor: none"></i>
       <a href="registration.php" class='bx bx-cart-alt' style="cursor: pointer"></a>
     </div>
@@ -104,67 +107,71 @@ if(isset($_POST['signin'])) {
   <div class="container">
 
     <!-- SIGNIN -->
-  <div class="form-box" id="sign-in" style="display: none;">
-    <h1 id="title">Sign In</h1>
-    <form method="post">
-      <div class="input-group">
-        <!-- email -->
-        <div class="input-field" id="nameField">
-          <input type="email" name="user_email" id="sign-in-email" placeholder="Email" required>
-        </div>
-        <!-- password -->
-        <div class="input-field" id="nameField">
-          <input type="password" name="user_password" id="sign-in-password" placeholder="Password" required>
-        </div>
-        <div class="button-container">
+    <div class="form-box" id="sign-in" style="display: none;">
+      <h1 id="title">Sign In</h1>
+      <form method="post">
+        <div class="input-group">
+          <!-- email -->
+          <div class="input-field" id="nameField">
+            <input type="email" name="user_email" id="sign-in-email" placeholder="Email:" required>
+          </div>
+          <!-- password -->
+          <div class="input-field" id="signInField">
+            <input type="password" name="user_password" id="signInPassword" placeholder="Password:" required>
+            <i class="fa-solid fa-eye" id="toggleSignInPassword" style="margin-right: 15px; cursor: pointer;"></i>
+          </div>
+
+          <div class="button-container">
             <!-- forgot password -->
-          <p id="premove" class="forgot-pass">Forgot Password <a href="#">Click Here!</a></p>
-          <!-- submit button -->
-          <button type="submit" class="submit-btn" name="signin">Continue</button>
+            <p id="premove" class="forgot-pass">Forgot Password <a href="#">Click Here!</a></p>
+            <!-- submit button -->
+            <button type="submit" class="submit-btn" name="signin">Continue</button>
+          </div>
+          <!-- sign in page -->
+          <p class="signup-button">Don't Have an Account?<a href="sign-up" id="signinBtn" class="signin-btn"> Sign up</a></p>
         </div>
-        <!-- sign in page -->
-        <p class="signup-button">Don't Have an Account?<a href="sign-up" id="signinBtn" class="signin-btn">  Sign up</a></p>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
 
     <!-- SIGNUP -->
     <!-- terms and conditions -->
     <div id="termsModal" class="modal">
       <div class="modal-content">
-      <h1>Terms and Conditions for Registering on BigBrew</h1>
+        <h1>Terms and Conditions for Registering on BigBrew</h1>
         <h2><b>Welcome to BigBrew!</b></h2> <b>Please read these terms and conditions carefully before using our
-          services. By registering and creating an account, you acknowledge and agree with these terms and conditions. 
+          services. By registering and creating an account, you acknowledge and agree with these terms and conditions.
           If you do not agree to any part of these terms and conditions, kindly refrain from registering on BigBrew.</b>
         <ol type="a">
-          <h2><b>Account Registration:<b><h2>
-          <li>In order to register on BigBrew, you must provide accurate and complete information about yourself.</li>
-          <li>To sign up for an account and register on our website, you must be of legal age.</li>
-          <li>Ensuring the confidentiality of your account details, including your username and password, is solely your responsibility.</li>
-          <li>You agree to inform us right away of any unauthorized use of your account or any other security breach.</li>
+          <h2><b>Account Registration:<b>
+                <h2>
+                  <li>In order to register on BigBrew, you must provide accurate and complete information about yourself.</li>
+                  <li>To sign up for an account and register on our website, you must be of legal age.</li>
+                  <li>Ensuring the confidentiality of your account details, including your username and password, is solely your responsibility.</li>
+                  <li>You agree to inform us right away of any unauthorized use of your account or any other security breach.</li>
         </ol>
-        <ol type ="a">
+        <ol type="a">
           <h2><b>Account Usage:</b></h2>
           <li>All activities performed through your account are entirely your responsibility.</li>
           <li>You agree not to use your account for any unlawful, unauthorized, or fraudulent purposes.</li>
-          <li>During the registration process, you are prohibited from impersonating any individual or entity, 
-          as well as providing false or misleading information.</li>
+          <li>During the registration process, you are prohibited from impersonating any individual or entity,
+            as well as providing false or misleading information.</li>
         </ol>
-        <ol type ="a">
-          <h2><b>Privacy and Data Protection:</b><h2>
-          <li>By completing the registration process on BigBrew, you consent to the collection, and use of your personal information that you voluntarily provide to us, 
-          which includes your name, address, and contact details.</li>
-          <li>We may use the personal information we collect to provide you with the products, and services and to communicate 
-          with you regarding your inquiries, orders, or account information.</li>
-          <li>We guarantee that your personal information will not be sold, traded, or otherwise transferred to any third parties without your consent.</li>
-          <li>In certain cases, we may share your personal information with trusted third-party service providers  to assist us in conducting 
-          our business or delivering services to you. These third parties are obligated to maintain the confidentiality 
-          and security of your personal information.</li>
-          <li>There may be circumstances where we are obligated to disclose your personal information by law, regulation, 
-          legal process, or when we reasonably believe that such disclosure is necessary to protect our rights, property, or the safety of others.</li>
+        <ol type="a">
+          <h2><b>Privacy and Data Protection:</b>
+            <h2>
+              <li>By completing the registration process on BigBrew, you consent to the collection, and use of your personal information that you voluntarily provide to us,
+                which includes your name, address, and contact details.</li>
+              <li>We may use the personal information we collect to provide you with the products, and services and to communicate
+                with you regarding your inquiries, orders, or account information.</li>
+              <li>We guarantee that your personal information will not be sold, traded, or otherwise transferred to any third parties without your consent.</li>
+              <li>In certain cases, we may share your personal information with trusted third-party service providers to assist us in conducting
+                our business or delivering services to you. These third parties are obligated to maintain the confidentiality
+                and security of your personal information.</li>
+              <li>There may be circumstances where we are obligated to disclose your personal information by law, regulation,
+                legal process, or when we reasonably believe that such disclosure is necessary to protect our rights, property, or the safety of others.</li>
         </ol>
-        <p><b>By registering an account, you acknowledge that you have read, understood, and agreed to the terms and conditions specified above. 
-          If you have any questions or concerns, please do not hesitate to contact us through the provided contact information on this website.</b></p>
+        <p><b>By registering an account, you acknowledge that you have read, understood, and agreed to the terms and conditions specified above.
+            If you have any questions or concerns, please do not hesitate to contact us through the provided contact information on this website.</b></p>
         <div class="check-box-container"
           style="display: flex; flex-direction: row; justify-content:space-between; align-items: center;">
           <div class="check-box" style="display: flex; flex-direction: row; gap: 0.5rem;">
@@ -199,27 +206,28 @@ if(isset($_POST['signin'])) {
           <input type="text" name="user_contact_number" id="sign-up-name" placeholder="Contact Number:" required>
         </div>
         <!-- password -->
-        <div class="input-field" id="nameField">
-          <input type="password" name="user_password" id="password" placeholder="Password:" required>
+        <div class="input-field" id="signUpField">
+          <input type="password" name="user_password" id="signUpPassword" placeholder="Password:" required>
+          <i class="fa-solid fa-eye" id="toggleSignUpPassword" style="margin-right: 15px; cursor: pointer;"></i>
         </div>
-        <div class="button-container">
-          <!-- submit button -->
-          <!-- <button type="submit" class="submit-btn" name="signup">Continue</button> -->
-          <button type="submit" class="submit-btn" name="signup" id="signupBtn">Continue</button>
+          <div class="button-container">
+            <!-- submit button -->
+            <!-- <button type="submit" class="submit-btn" name="signup">Continue</button> -->
+            <button type="submit" class="submit-btn" name="signup" id="signupBtn">Continue</button>
+          </div>
+          <!-- sign in page -->
+          <p class="signin-button">Already have an account?<a href="sign-in" id="signinBtn" class="signup-btn"> Sign in</a></p>
         </div>
-        <!-- sign in page -->
-        <a href="sign-in" id="signinBtn" class="signup-btn">Sign in</a>
-      </div>
     </form>
   </div>
-  
+
   </div>
 
-      <!-- Footer -->
-    <div>
-        <?php include('footer.php'); ?>
-    </div>
-   
+  <!-- Footer -->
+  <div>
+    <?php include('footer.php'); ?>
+  </div>
+
   <script src="./js/main.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
